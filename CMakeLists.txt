@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 project(synthesis-task LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wall")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -14,7 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-add_executable(synthesis
+add_executable(synthesis-task
     main.cpp
     include/synthesizer.hpp
     include/wav.hpp
@@ -24,4 +24,4 @@ add_executable(synthesis
     ui/audiomenu.ui
 )
 
-target_link_libraries(synthesis PRIVATE Qt5::Widgets)
+target_link_libraries(synthesis-task PRIVATE Qt5::Widgets)
